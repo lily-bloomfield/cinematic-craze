@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Custom Scroll Bar  */
+
+/* html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+} */
+
+/* Global COlor  */
+
+:root {
+  --primary-color: #e70101;
+  --primary-color-dark: #c11119;
+  --text-color: #ececec;
+  --text-color-dark: #9c8e8e;
+  --bg-color: #000;
+  --bg-color-light: #242c3a;
+  --font-header: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0;
+}
+/* common  */
+.btn {
+  background-color: #e70101;
+  padding: 8px 20px;
+  border-radius: 0.5rem;
+  border: none;
+  margin: auto 0.3rem;
+}
+
+/* XL screen size  */
+/* hero section start  */
+header {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/4d7bb476-6d8b-4c49-a8c3-7739fddd135c/a610bfd1-afe6-4947-ab8f-5f707cfbbc10/MM-en-20240429-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+  height: 100vh;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  padding: 3%;
+}
+header::before {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* navbar start  */
+nav {
+  color: var(--text-color);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+  position: sticky;
+  z-index: 500;
+  top: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.65) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.logo {
+  font-family: var(--font-header);
+  font-weight: 800;
+  color: var(--primary-color);
+  font-size: 1.2em;
+}
+
+.navItems {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navItems li {
+  margin: 10px 15px;
+  position: relative;
+}
+.navItems li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.5s ease-in-out;
+}
+.navItems li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.navItems a:hover::after {
+  width: 100%;
+}
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.btn:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--text-color);
+}
+/* navbar end  */
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin-top: -4%;
+}
+.searchSection div {
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+  /* text-decoration: none; */
+  /* list-style: none; */
+  border: none;
+  font-family: var(--font-header);
+}
+p {
+  font-family: var(--font-body);
+  color: var(--text-color);
+}
+h1 {
+  font-family: var(--font-header);
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 1% 0 2% 0;
+}
+.searchSection div div {
+  display: flex;
+  justify-content: center;
+}
+.searchSection div div form {
+  width: 65%;
+}
+.searchBar {
+  background-color: rgba(36, 44, 58, 0.5);
+  width: 70%;
+  border-width: 0.5px;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(226, 226, 226, 0.5);
+  margin: 0.3rem;
+}
+.searchBar::placeholder {
+  color: var(--text-color-dark);
+}
+/* hero section end  */
+
+/* movie section*/
+main {
+  margin: 2% 4%;
+  /* background-color: aquamarine; */
+}
+/* trending movie section */
+.container-trending,
+.container-latest {
+  margin-top: 7%;
+}
+.trending-movies-container,
+.latest-movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0;
+}
+.trending-movies-div {
+  position: relative;
+}
+.trending-title {
+  margin: 3% 0 2% 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.trending-title div {
+  margin-left: 2%;
+}
+.btn-series {
+  background-color: transparent;
+  border: 1px solid var(--primary-color-dark);
+}
+.movie-img {
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+.fa-circle-play {
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-img:hover {
+  opacity: 0.5;
+}
+.movie-img:hover + .fa-circle-play {
+  opacity: 1 !important;
+}
+
+.trending-movies {
+  margin-top: 10%;
+}
+
+.trending-movies-p {
+  font-size: 0.8rem;
+  color: var(--text-color-dark);
+}
+
+/* footer  */
+footer {
+  margin: 10% 4% 2% 4%;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.newsLetter {
+  width: 50%;
+}
+
+.contactInfo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactInfo ul {
+  margin-top: 8%;
+}
+.contactInfo ul li,
+.newsLetter p {
+  font-size: 0.8rem;
+  color: var(--text-color-dark);
+  margin-top: 6%;
+}
+.newsLetter p {
+  margin: 1.5% 0 2% 0%;
+}
+.copyRight {
+  font-size: 0.8rem;
+  color: var(--text-color-dark);
+  margin: 6% 0 2% 0;
+  text-align: center;
+  border-top: 1px solid rgb(226, 226, 226, 0.3);
+  padding-top: 2%;
+}
+/* movie section end  */
+
+/* medium screen size  */
+
+/* small screen size  */
+@media (max-width: 430px) {
+  nav {
+    padding-top: 1rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .logo i,
+  .navItems,
+  .btn-SignIn {
+    display: none;
+  }
+  .signIn .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .searchSection h1 {
+    font-size: 2rem;
+  }
+  .searchSection p {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+  .searchBar {
+    width: 80%;
+    margin: 0.8rem;
+  }
+  .trending-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 2.5rem 0 1rem 0;
+  }
+  .trending-title h2 {
+    font-size: 1.1rem;
+  }
+  .trending-title div {
+    margin-top: 0.5rem;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .trending-title div .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .trending-movies-container,
+  .latest-movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0;
+  }
+  footer {
+    margin: 10% 4% 2% 4%;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsLetter {
+    width: 100%;
+    margin: 3rem 0;
+    text-align: center;
+  }
+  .newsLetter form {
+    margin: auto;
+  }
+  .contactInfo {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .contactInfo h4 {
+    font-size: 0.7rem;
+  }
+  .exploreMore ul li,
+  .social ul li,
+  .copyRight,
+  .newsLetter p {
+    font-size: 0.6rem;
+  }
+  .newsLetter p {
+    padding: 0.5rem 0.3rem 0.8rem 0.3rem;
+  }
+}

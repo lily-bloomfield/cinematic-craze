@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinematicCraze Movie Channel</title>
+    
+    <!-- css  -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- bootstrap  -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    /> -->
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <!-- nav bar  -->
+    <nav>
+        <div class="logo"><i class="fa-solid fa-video" style="margin-right: 0.5rem";></i>CinematicCraze</div>
+        <div class="navMenu">
+          <ul class="navItems">
+            <li><a href="">Home</a></li>
+            <li><a href="">Genre</a></li>
+            <li><a href="">Country</a></li>
+            <li><a href="">Movies</a></li>
+            <li><a href="">TV Shows</a></li>
+            <li><a href="">Top IMDB</li>
+          </ul>
+        </div>
+        <div class="signIn">
+          <button class="btn btn-series">Login</button>
+          <button type="button" class="btn btn-SignIn">Sign In</button>
+          
+        </div>
+    </nav>
+    <!-- nav bar close  -->
+    <header>
+      <div class="searchSection">
+        <div>
+            <h1>Unlimited Movies, TV Shows and more</h1>
+            <p class="">Watch Anywhere, Anytime.</p>
+            <div>
+                <form>
+                    <input class="form-control me-2 searchBar" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn " type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <!-- trending movie section start  -->
+        <div class="container-trending">
+          <div class="trending-title" >
+            <h2 style="text-decoration: none;">Trending</h2>
+            <div>
+              <button class="btn btn-movies"><i class="fa-solid fa-play" style="margin-right: 0.5rem;"></i>Movies</button>
+              <button class="btn btn-series"><i class="fa-solid fa-film" style="margin-right: 0.5rem;"></i>Series</button>
+            </div>
+          </div>
+          <div class="trending-movies-container"></div>
+        </div>
+        <!-- trening movie section end  -->
+
+        <!-- latest movies section start   -->
+        <div class="container-latest">
+          <div class="trending-title" >
+              <h2 style="text-decoration: none;">Latest Movies</h2>
+              <div>
+                  <button class="btn btn-movies"><i class="fa-solid fa-play" style="margin-right: 0.5rem;"></i>Movies</button>
+                  <button class="btn btn-series"><i class="fa-solid fa-film" style="margin-right: 0.5rem;"></i>Series</button>
+              </div>
+          </div>
+          <div class="latest-movies-container">
+          </div>
+        </div>
+        <!-- latest movies section end  -->
+
+        <!-- latest series section start   -->
+        <!-- latest series section end  -->
+
+        <!-- comming soon section start   -->
+        <!-- coming soon section end  -->
+        
+    </main>
+    <footer>
+      <div class="newsLetter">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Get the latest updates delivered straight to your inbox. <br>
+          Subscribe to our newsletter for exclusive offers and behind-the-scenes content.
+        </p>
+        <form style="width: 65%; display: flex;" >
+          <input class="form-control me-2 searchBar" type="search" placeholder="Email" aria-label="Search">
+          <button class="btn " type="submit">Send</button>
+        </form>
+      </div>
+      <div class="contactInfo">
+        <div class="exploreMore">
+          <h4>Explore More</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="exploreMore">
+          <h4>Discover More</h4>
+          <ul>
+            <li>Latest Releases</li>
+            <li>Browse by Genre</li>
+            <li>Highest Rated Films</li>
+            <li>Search</li>
+          </ul>
+        </div>
+        <div class="social">
+          <h4>Connect With Us</h4>
+          <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      
+    </footer>
+    <p class="copyRight">CinematicCraze © 2024 All rights reserved </p>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
