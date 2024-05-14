@@ -26,6 +26,7 @@ html::-webkit-scrollbar-thumb {
   --primary-color: #e70101;
   --primary-color-dark: #c11119;
   --text-color: #ececec;
+  --text-color-medium: #b9b2b2;
   --text-color-dark: #9c8e8e;
   --bg-color: #000;
   --bg-color-light: #242c3a;
@@ -46,7 +47,9 @@ body {
   border: none;
   margin: auto 0.3rem;
 }
-
+.btn:hover {
+  cursor: pointer;
+}
 /* XL screen size  */
 /* hero section start  */
 header {
@@ -134,6 +137,7 @@ nav {
   color: var(--text-color);
 }
 /* navbar end  */
+
 .searchSection {
   display: flex;
   justify-content: center;
@@ -206,14 +210,21 @@ main {
   margin-top: 7%;
 }
 .trending-movies-container,
-.latest-movies-container {
+.latest-movies-container,
+.upcoming-movies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 0;
 }
 .trending-movies-div {
   position: relative;
+  margin-bottom: 2rem;
+}
+.trending-movies-div h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .trending-title {
   margin: 3% 0 2% 0;
@@ -230,7 +241,7 @@ main {
 }
 .movie-img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
 }
 .fa-circle-play {
@@ -239,6 +250,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -10%;
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -302,8 +314,6 @@ footer {
 }
 /* movie section end  */
 
-/* medium screen size  */
-
 /* small screen size  */
 @media (max-width: 430px) {
   nav {
@@ -353,7 +363,8 @@ footer {
     padding: 6px 10px;
   }
   .trending-movies-container,
-  .latest-movies-container {
+  .latest-movies-container,
+  .upcoming-movies-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
@@ -392,5 +403,126 @@ footer {
   }
   .newsLetter p {
     padding: 0.5rem 0.3rem 0.8rem 0.3rem;
+  }
+}
+
+/* home pg  */
+.hero-container {
+  /* background-color: #c11119; */
+  overflow-y: hidden;
+  height: 100vh;
+  position: relative;
+}
+.header-movie {
+  background-image: url(image/movie\ details.jpg);
+  height: 100vh;
+  /* position: relative; */
+  padding: 3%;
+  background-size: cover;
+  background-position: center;
+}
+.header-movie::before {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header-movie::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.movie-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  /*left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 45%;
+  margin-top: -15%;
+  padding: 2% 4%;
+}
+/* .searchSection div {
+  text-align: left;
+} */
+.movie-details div p {
+  color: var(--text-color-medium);
+  font-weight: 300;
+}
+.details-info {
+  font-size: 0.85rem;
+  margin: 2rem 0;
+}
+/* medium screen size  */
+@media (max-width: 768px) {
+  nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+
+  .navItems,
+  .btn-SignIn {
+    display: none;
+  }
+  /* .hero-container {
+    display: flex;
+    flex-direction: column;
+  }*/
+  .header-movie {
+    background-image: url(image/movie\ details\ md\ sm\ size.jpg);
+    height: 47vh;
+    width: 100vw;
+    padding: 3%;
+    background-size: cover;
+    background-position: center center;
+  }
+  .header-movie::before {
+    display: none;
+  }
+
+  .movie-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    /*left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 100%;
+    margin-top: 10%;
+    padding: 2% 6%;
+  }
+  .movie-details h1 {
+    font-size: 2rem;
+  }
+}
+
+/* sm screen size  */
+@media (max-width: 768px) {
+  .movie-details {
+    margin-top: 3%;
   }
 }
